@@ -87,12 +87,14 @@ Response :
 {
   "status": "boolean",
   "message": "string",
-  "data": {
-    "id": "integer", 
-    "name": "string",
-    "created_at": "string",
-    "updated_at": "string"
-  },
+  "data": [
+      {
+        "id": "integer", 
+        "name": "string",
+        "created_at": "string",
+        "updated_at": "string"
+      }
+  ],
   "meta": {
     "pagination": {
       "hasMorePages": "boolean",
@@ -101,6 +103,34 @@ Response :
       "prev_cursor": "string",
       "prev_page_url": "string"
     },
+  "error": "array"
+}
+```
+
+### API Get Category By ID
+
+Request :
+
+- Method : GET
+- Endpoint : `/v1/category/:category_id`
+- Header :
+  - Content-Type: application/json
+  - Accept: application/json
+
+
+Response :
+
+```json
+{
+  "status": "boolean",
+  "message": "string",
+  "data": {
+    "id": "integer", 
+    "name": "string",
+    "created_at": "string",
+    "updated_at": "string"
+  },
+  "meta": "object",
   "error": "array"
 }
 ```
